@@ -1,0 +1,8 @@
+set autocalc
+set truncate
+set xlsx_readformulas
+color "type=STRG fg=GREEN bg=BLACK"
+color "type=HEADINGS fg=WHITE bg=BLUE"
+color "type=HEADINGS_ODD fg=WHITE bg=GREEN"
+color "type=CELL_SELECTION fg=WHITE bg=MAGENTA"
+color "type=CELL_SELECTION_SC fg=YELLOW bg=MAGENTA"
