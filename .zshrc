@@ -13,7 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH=$PATH:/home/panchoop/.local/bin
+PATH=$PATH:/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux
 
 plugins=(vi-mode colored-man-pages)
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
