@@ -13,7 +13,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH=$PATH:/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux
+# Path for local binaries
+PATH=$PATH:/home/panchoop/.local/bin
+
+# PATHs for texlive
+PATH=$PATH:/usr/local/texlive/2021/bin/x86_64-linux
+INFOPATH=$INFOPATH:/usr/local/texlive/2021/texmf-dist/doc/info
+MANPATH=$MANPATH:/usr/local/texlive/2021/texmf-dist/doc/man
 
 plugins=(vi-mode colored-man-pages)
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
