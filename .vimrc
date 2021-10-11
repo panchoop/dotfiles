@@ -17,7 +17,7 @@ set wrap
 " User interface options
 set laststatus=2
 set ruler
-set relativenumber
+set number relativenumber
 set title
 " Code folding options
 set foldmethod=indent
