@@ -1,0 +1,10 @@
+# Dotfile of YADM
+# It is not required and it does not contain any particular configuration.
+# But it contains specific configuration information that cannot be captured by yadm.
+
+vim packages:
+- Ultisnips
+- vim-sendtoterm
+- Ale
+- vimsneak
+- <some completion software>
