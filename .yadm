@@ -8,3 +8,15 @@ vim packages:
 - Ale
 - vimsneak
 - <some completion software>
+
+
+Windows settings: # Only obscure things
+- Switch the fn - ctrl
+- Remap Caps Lock with backspace
+- Use a customized keyboard layout (English alt-gr with dead keys)
+   For this I followed this instructions: 
+     - https://superuser.com/questions/1133440/us-international-without-dead-keys-layout-windows-10
+     - which leads to this repository: https://github.com/thomasfaingnaert/win-us-intl-altgr
+     - after installation, it got permanently activated with:
+     Settings > Typing settings > (at the bottom of the screen) Advanced Keyboard settings 
+       > Override for default input settings > Select you custom keyboard from the menu
