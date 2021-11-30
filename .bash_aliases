@@ -9,6 +9,3 @@ alias get_from_server="scp panchoop@192.168.178.202:~/to_host/* /home/panchoop/f
 
 #
 alias ramonip='192.168.178.104'
-
-# 
-alias set_display='export DISPLAY="192.168.178.39:0.0"'

@@ -39,6 +39,8 @@ nnoremap <F2> :bo vert term<cr><C-w>w
 " Fast buffer switching
 nmap <C-P> :bp<Cr>
 nmap <C-N> :bn<Cr>
+" WSL2 bypassing ctrl-v for block selection mode
+nnoremap <Leader>v <c-v>
 
 "To force the vim-latex plugin to activate on an empty .tex file"
 autocmd Filetype plaintex set ft=tex
@@ -49,6 +51,11 @@ let g:vimtex_view_general_viewer='zathura'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"You complete me settings
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_select_completion = ['<C-p>', '<Up>']
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 
 nnoremap \s :UltiSnipsEdit<Cr>:tab sb<Cr>gT:b #<Cr>gt
 
