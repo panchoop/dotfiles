@@ -139,5 +139,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Personal setup
-#export DISPLAY='192.168.178.39:0.0'
-export DISPLAY='192.168.0.227:0.0'
+export DISPLAY='192.168.178.28:0.0'
+#export DISPLAY='192.168.0.227:0.0'
+#export DISPLAY='192.168.0.192:0.0'
+#export DISPLAY='192.168.126.46:0.0'

@@ -4,10 +4,12 @@ $0
 endsnippet
 
 snippet t "temp" b
-x = np.array([${1:1}, ${2:2}])
-y = np.array([${3:1}, ${4:2}])
-X, Y = np.meshgrid(x, y)
-ax.plot_surface(X, Y, Z, facecolors=colors[self.state['$5']],
-                **params)
+print("$1: ", self.$1)
 $0
 endsnippet
+
+snippet db "to debug code fast" b
+print(f"variable $1: {$1}")
+$0
+endsnippet
+

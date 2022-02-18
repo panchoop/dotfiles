@@ -1,3 +1,25 @@
+snippet Sij "temporal" i
+S_{i,j}^t$0
+endsnippet
+
+snippet eps "temporal" i
+\epsilon_{i,j}$0
+endsnippet
+
+snippet epsp "temporal" i
+\epsilon_{i,j}^\prime$0
+endsnippet
+
+snippet Aij "tempora"  i
+A_{i,j}^t$0
+endsnippet
+
+snippet tij "tempora"  i
+\theta_{i,j}^t$0
+endsnippet
+
+
+
 snippet bes "beginequationstar" b
 \begin{equation*}
   $1
@@ -29,6 +51,19 @@ snippet item "itemize" b
 \end{itemize}
 $0
 endsnippet
+
+snippet it "Description" b
+\item $0
+endsnippet
+
+snippet fig "figure" b
+\begin{figure}[h]
+  \includegraphics[width=$1\linewidth]{${2:path_to_file}}
+	\caption{$3}
+\end{figure}
+endsnippet
+
+
 
 snippet eq "equation" b
 \begin{equation}
@@ -74,11 +109,28 @@ snippet sum "summation"
 \sum_{$1}^{$2}$0
 endsnippet
 
-snippet () "Open brackets" iA
-($1)$0
+# Beamer settings
+snippet frame "begin a frame" b
+\begin{frame}[t] \frametitle{$1}
+  $2
+\end{frame}
+$0
 endsnippet
 
-snippet temp "temporal command" 
-\text{für }$0
+snippet only "only tag" b
+\only<$1>{%
+  $2
+}%
+$0
 endsnippet
+
+snippet onslide "onslide tag" b
+\onslide<$1>{%
+  $2
+}%
+$0
+endsnippet
+
+
+
 

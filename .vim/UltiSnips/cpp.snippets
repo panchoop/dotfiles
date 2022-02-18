@@ -1,3 +1,12 @@
+snippet print "fast print" b
+std::cout << "$1" << std::endl;
+$0
+endsnippet
+
+snippet st "std::" i
+std::$0
+endsnippet
+
 snippet def "typeless definition" b
 $1 = $2;
 $0
@@ -88,24 +97,7 @@ node["$1"].push_back($2);
 $0
 endsnippet
 
-snippet temp "temp" b
-geo_node $1;
-$1.name = "$1";
-$1.type = $2;
-$1.centerx = $3;
-$1.centery = $4;
-$1.centerz = $5;
-$1.height = $6;
-$1.radius = $7;
-$1.lengthx = $8;
-$1.lengthy = $9;
-$1.lengthz = $10;
-$1.rotations = $11;
-$1.permittivity_real = $12;
-$1.permittivity_imag = $13;
-$1.contained_in = $14;
+snippet temp "temp" i
+std::cout << "value out.$1: " << out.$1 << std::endl;
 $0
 endsnippet
-
-
-        
