@@ -148,14 +148,14 @@ then
     then
         echo "Using HOME computer"
         export DISPLAY='192.168.0.164:0.0'
+    elif [ "$COMPUTER_ID" == "OFFICE" ]
+    then
+        echo "using NOTEBOOK computer"
+        #export DISPLAY='192.168.178.28:0.0'
+        export DISPLAY='192.168.0.227:0.0'
     else
         echo "Current COMPUTER_ID not considered in .bashrc"
     fi
 else
    echo "Undefined COMPUTER_ID. Please do in .bash_user"
-   # Personal setup
-   export DISPLAY='192.168.178.28:0.0'
-   #export DISPLAY='192.168.0.227:0.0'
-   #export DISPLAY='192.168.0.192:0.0'
-   #export DISPLAY='192.168.126.46:0.0'
 fi
