@@ -104,6 +104,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+# Here the COMPUTER_ID enviromental variable is defined
+if [ -f ~/.bash_user ]; then
+    . ~/.bash_user
+fi
 
 # PATHS for texlive
 PATH=/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux:$PATH;
@@ -138,8 +142,20 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Personal setup
-export DISPLAY='192.168.178.28:0.0'
-#export DISPLAY='192.168.0.227:0.0'
-#export DISPLAY='192.168.0.192:0.0'
-#export DISPLAY='192.168.126.46:0.0'
+if [ -n "$COMPUTER_ID" ]
+then
+    if [ "$COMPUTER_ID" == "HOME" ]
+    then
+        echo "Using HOME computer"
+        export DISPLAY='192.168.0.164:0.0'
+    else
+        echo "Current COMPUTER_ID not considered in .bashrc"
+    fi
+else
+   echo "Undefined COMPUTER_ID. Please do in .bash_user"
+   # Personal setup
+   export DISPLAY='192.168.178.28:0.0'
+   #export DISPLAY='192.168.0.227:0.0'
+   #export DISPLAY='192.168.0.192:0.0'
+   #export DISPLAY='192.168.126.46:0.0'
+fi
