@@ -150,7 +150,7 @@ then
         export DISPLAY='192.168.0.164:0.0'
     elif [ "$COMPUTER_ID" == "OFFICE" ]
     then
-        echo "using NOTEBOOK computer"
+        echo "using OFFICE computer"
         #export DISPLAY='192.168.178.28:0.0'
         export DISPLAY='192.168.0.227:0.0'
     else
