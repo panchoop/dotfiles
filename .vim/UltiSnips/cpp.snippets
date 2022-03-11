@@ -7,36 +7,35 @@ snippet st "std::" i
 std::$0
 endsnippet
 
-snippet def "typeless definition" b
+snippet d "typeless definition" b
 $1 = $2;
 $0
 endsnippet
 
-snippet defi "define an integer" b
+snippet di "define an integer" b
 int $1 = $2;
 $0
 endsnippet
 
-snippet defs "define a string" b
+snippet ds "define a string" b
 string $1 = $2;
 $0
 endsnippet
 
-snippet defst "define a size_t" b
+snippet dst "define a size_t" b
 size_t $1 = $2;
 $0
 endsnippet
 
-snippet deff "define a float" b
+snippet df "define a float" b
 float $1 = $2;
 $0
 endsnippet
 
-snippet defd "define a double" b
+snippet dd "define a double" b
 double $1 = $2;
 $0
 endsnippet
-
 
 snippet for "for loop" b
 for ($1; $2; $3){
@@ -50,6 +49,11 @@ for (size_t $1 = 0; $1 < $2; $1++){
 } $0
 endsnippet
 
+snippet forr "range for loop" b
+for (const auto& $1 : $2){
+    $3
+} $0
+endsnippet
 
 snippet while "while loop" b
 while (${1:condition}){
@@ -59,10 +63,10 @@ endsnippet
 
 snippet class "class definition" b
 class $1 {
-    private:
-        $2
     public:
         $3
+    private:
+        $2
 };
 $0
 endsnippet
@@ -85,19 +89,4 @@ snippet if "if " b
 if ($1){
     $2
 } $0
-endsnippet
-
-snippet node "errase in future" b
-node["$1"] = $2;
-$0
-endsnippet
-
-snippet nodes "errase in future" b
-node["$1"].push_back($2);
-$0
-endsnippet
-
-snippet temp "temp" i
-std::cout << "value out.$1: " << out.$1 << std::endl;
-$0
 endsnippet
