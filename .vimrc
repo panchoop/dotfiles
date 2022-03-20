@@ -59,15 +59,12 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 nnoremap \s :UltiSnipsEdit<Cr>:tab sb<Cr>gT:b #<Cr>gt
 
-if exists("*OpenFile")
-    finish
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
 endif
-function! Note()
-    wincmd v
-    wincmd l
-    execute "edit /home/panchoop/Dropbox/Francisco/misc/notes/note.md"
-endfunction
-" Function that allows to call this function using just :Note
-command Note call Note()
-
     
