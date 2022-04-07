@@ -15,3 +15,6 @@ au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let python_highlight_all = 1
 syntax on
+
+" Set proper parenthesis indentation
+setl cino+=(0
