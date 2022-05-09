@@ -1,4 +1,5 @@
 alias server='192.168.178.202'
+alias vmpaolo='20.71.211.55'
 alias localhost1='-L localhost:8080:localhost:8080 '
 alias ssh='ssh '
 alias sshserver='ssh -L localhost:8080:localhost:8080 192.168.178.202'
