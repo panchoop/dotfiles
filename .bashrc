@@ -151,8 +151,8 @@ then
     elif [ "$COMPUTER_ID" == "OFFICE" ]
     then
         echo "using OFFICE computer"
-        #export DISPLAY='192.168.178.28:0.0'
-        export DISPLAY='192.168.0.227:0.0'
+        export DISPLAY='192.168.178.27:0.0'
+        #export DISPLAY='192.168.0.227:0.0'
     else
         echo "Current COMPUTER_ID not considered in .bashrc"
     fi
