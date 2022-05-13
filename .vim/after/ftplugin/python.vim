@@ -4,6 +4,9 @@
 "Enable folding
 set foldmethod=indent
 set foldlevel=99
+set tabstop=4
+set shiftwidth=4
+set smarttab
 " Enable folding with the spacebar
 nnoremap <space> za
 
