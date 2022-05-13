@@ -1,3 +1,11 @@
+snippet t "temp" b
+std::cout << std::setw(WIDTH)
+          << "$1: " << header.$2
+          << std::endl;
+$0
+endsnippet
+	
+
 snippet print "fast print" b
 std::cout << "$1" << std::endl;
 $0
@@ -95,3 +103,13 @@ if ($1){
     $2
 } $0
 endsnippet
+
+snippet "#?ifndef" "ifndef option" !rb
+#ifndef $1
+#define $1
+
+$0
+
+#endif
+endsnippet
+
