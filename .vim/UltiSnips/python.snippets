@@ -1,6 +1,7 @@
-snippet w "temp" b
-f.write('$1\n')
-$0
+snippet text "temp" b
+text = '$1'
+replacement = '$1'
+filename = filename.replace(text, replacement)
 endsnippet
 
 snippet db "to debug code fast" b
