@@ -1,7 +1,5 @@
 snippet t "temp" b
-std::cout << std::setw(WIDTH)
-          << "$1: " << header.$2
-          << std::endl;
+{${1:0.00}, thruple{${2:-100},${3:-100},${4:-100}}},  // ${5:black  }  #${6:0F0F0F} (${7:255},${8:255},${9:255})
 $0
 endsnippet
 	
@@ -15,6 +13,11 @@ snippet printv "fast print value" b
 std::cout << "$1: " << $1 << std::endl;
 $0
 endsnippet
+
+snippet here "fast debugging" b
+std::cout << "I AM HERE $1" << std::endl;
+endsnippet
+
 
 snippet st "std::" i
 std::$0
