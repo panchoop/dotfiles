@@ -23,6 +23,12 @@ set title
 set foldmethod=indent
 " Miscellaneous Options
 set history=1000
+" True colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif 
 " Set the onedark colorsscheme
 colorscheme onedark
 
