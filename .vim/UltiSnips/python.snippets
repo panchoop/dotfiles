@@ -1,7 +1,6 @@
-snippet text "temp" b
-text = '$1'
-replacement = '$1'
-filename = filename.replace(text, replacement)
+snippet w "temp" b
+print("$1: ", self.$1)
+$0
 endsnippet
 
 snippet db "to debug code fast" b
