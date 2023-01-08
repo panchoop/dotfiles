@@ -1,7 +1,9 @@
 alias server='192.168.178.202'
 alias vmpaolo='panchoop@20.71.211.55'
+alias vmpanchoop='panchoop@20.195.166.111'
 alias localhost1='-L localhost:8080:localhost:8080 '
 alias ssh='ssh '
+alias mosh='mosh '
 alias sshserver='ssh -L localhost:8080:localhost:8080 192.168.178.202'
 alias cd='cd '
 if [ "$COMPUTER_ID" == "HOME" ]

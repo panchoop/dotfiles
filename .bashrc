@@ -142,20 +142,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if [ -n "$COMPUTER_ID" ]
-then
-    if [ "$COMPUTER_ID" == "HOME" ]
-    then
-        echo "Using HOME computer"
-        export DISPLAY='192.168.0.164:0.0'
-    elif [ "$COMPUTER_ID" == "OFFICE" ]
-    then
-        echo "using OFFICE computer"
-        #export DISPLAY='192.168.178.27:0.0'
-        export DISPLAY='192.168.0.227:0.0'
-    else
-        echo "Current COMPUTER_ID not considered in .bashrc"
-    fi
-else
-   echo "Undefined COMPUTER_ID. Please do in .bash_user"
-fi
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0.0
