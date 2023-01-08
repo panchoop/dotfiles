@@ -12,3 +12,9 @@ snippet date "Current date" b
 ###############################################################################
 endsnippet
 
+snippet t "temporal" b
+case="$1-$2"
+iter="$3"
+ohif -u "/mnt/nfs/panchoop/Linz_FDTD_copy/$case/Iteration_"$iter"_DICOM.zip" -n $case -i $ID
+$0
+endsnippet

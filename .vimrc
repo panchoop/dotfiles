@@ -23,6 +23,12 @@ set title
 set foldmethod=indent
 " Miscellaneous Options
 set history=1000
+" True colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif 
 " Set the onedark colorsscheme
 colorscheme onedark
 
@@ -52,11 +58,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "You complete me settings
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_select_completion = ['<C-p>', '<Up>']
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_select_completion = ['<C-p>', '<Up>']
+"let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap \s :UltiSnipsEdit<Cr>:tab sb<Cr>gT:b #<Cr>gt
 
 " WSL yank support
@@ -68,3 +72,15 @@ if executable(s:clip)
     augroup END
 endif
     
+" CoC settings
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
