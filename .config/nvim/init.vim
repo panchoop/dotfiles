@@ -43,6 +43,7 @@ let g:vimtex_view_general_viewer='zathura'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/UltiSnips"]
 
 " Quick open of ultsnip editor
 nnoremap \s :UltiSnipsEdit<Cr>:tab sb<Cr>gT:b #<Cr>gt
