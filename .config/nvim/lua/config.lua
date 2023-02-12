@@ -37,13 +37,14 @@ require("lazy").setup(
    },
    -- ulti-snips
    {"SirVer/ultisnips",
-   config = function()
+    lazy = false,
+    config = function()
        vim.cmd([[
             let g:UltiSnipsExpandTrigger="<tab>"
-            let g:UltiSnipsJumpForwardTrigger="<tab>"
-            let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
             let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/UltiSnips"]
       ]])
+            --let g:UltiSnipsJumpForwardTrigger="<tab>"
+            --let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
    end,
    keys ={
        -- nnoremap \s :UltiSnipsEdit<Cr>:tab sb<Cr>gT:b #<Cr>gt

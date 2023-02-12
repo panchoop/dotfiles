@@ -7,19 +7,25 @@ local colors = {
   orange = '#fe8019',
   green = '#8ec07c',
   purple = "#4e00b7",
+  blue = '#2060D6',
+  mustard = '#c8ce0f',
 }
 
 local theme = {
   normal = {
     a = { fg = colors.white, bg = colors.black },
-    b = { fg = colors.black, bg = colors.grey },
-    c = { fg = colors.black, bg = colors.light_green },
+    b = { fg = colors.white, bg = colors.blue },
+    c = { fg = colors.white, bg = colors.blue },
     z = { fg = colors.white, bg = colors.black },
   },
   insert = { a = { fg = colors.black, bg = colors.light_green },
-             c = { fg = colors.black, bg = colors.purple }},
-  visual = { a = { fg = colors.black, bg = colors.orange } },
-  replace = { a = { fg = colors.black, bg = colors.green } },
+             c = { fg = colors.black, bg = colors.light_green }},
+  visual = { a = { fg = colors.black, bg = colors.orange } ,
+             c = { fg = colors.black, bg = colors.orange }},
+  replace = { a = { fg = colors.black, bg = colors.mustard } ,
+             c = { fg = colors.black, bg = colors.mustard }},
+  command = { a = { fg = colors.white, bg = colors.red } ,
+             c = { fg = colors.white, bg = colors.red }},
 }
 
 local empty = require('lualine.component'):extend()
