@@ -105,4 +105,13 @@ require("lazy").setup(
        -- require("lualine").setup();
    end,
    },
+   -- to copy anywhere
+   {"ShikChen/osc52.vim",
+   keys = {
+     {"<C-c>", "y:call SendViaOSC52(getreg('\"'))<CR>", desc = "copy", mode="v"},
+     -- {"<F7>", "y:Oscyank<cr>", desc="copy", mode="x"},
+   },
+    
+
+   }
 })
