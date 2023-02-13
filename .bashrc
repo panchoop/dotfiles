@@ -126,6 +126,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -f ~/.bash_only_local ]; then
+    . ~/.bash_only_local
+fi
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -143,3 +147,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0.0
+
