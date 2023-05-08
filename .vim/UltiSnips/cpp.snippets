@@ -8,10 +8,21 @@ std::cout << "$1: " << $1 << std::endl;
 $0
 endsnippet
 
-snippet here "fast debugging" b
-std::cout << "I AM HERE $1" << std::endl;
+snippet token "fast debugging" b
+std::cout << "token $1" << std::endl;
 endsnippet
 
+snippet get "fast get" i
+std::get<$1>($0)
+endsnippet
+
+snippet veci "vector int" i
+std::vector<int> $0
+endsnippet
+
+snippet tupi "tuple int int int" i
+std::tuple<int, int, int> $0
+endsnippet
 
 snippet st "std::" i
 std::$0
@@ -109,4 +120,13 @@ $0
 
 #endif
 endsnippet
+
+snippet omp "omp parallel" b
+#pragma omp parallel
+{
+#pragma omp for
+$1
+}
+endsnippet
+
 

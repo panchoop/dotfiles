@@ -18,3 +18,5 @@ alias get_from_server="scp panchoop@192.168.178.202:~/to_host/* /home/panchoop/f
 
 #
 alias ramonip='192.168.178.104'
+alias nvim='nvim -w ~/nvimkey.log'
+alias nvimx="nvim main.cpp -c ':vspl' -c ':vspl' -c 'execute \"normal \<C-w>w\"' -c 'execute \"normal \<C-w>w\"' -c ':e build/exec.sh' -c ':spl' -c ':term' -c 'execute \"normal \<C-w>h\"'"

@@ -111,6 +111,9 @@ require("lazy").setup(
      {"<C-c>", "y:call SendViaOSC52(getreg('\"'))<CR>", desc = "copy", mode="v"},
      -- {"<F7>", "y:Oscyank<cr>", desc="copy", mode="x"},
    },
+   -- toggle term
+   {'akinsho/toggleterm.nvim', version = '*', config = true},
+   
     
 
    }
