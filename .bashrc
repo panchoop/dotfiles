@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=20000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -126,6 +126,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0.0
 if [ -f ~/.bash_only_local ]; then
     . ~/.bash_only_local
 fi
@@ -146,5 +147,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0.0
 

@@ -8,3 +8,7 @@ print(f"variable $1: {$1}")
 $0
 endsnippet
 
+snippet interact "interactive mode" b
+import code; code.interact(local=dict(globals(), **locals()))
+$0
+endsnippet

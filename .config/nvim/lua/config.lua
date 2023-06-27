@@ -80,12 +80,16 @@ require("lazy").setup(
    },
    -- Autopairs
    {"jiangmiao/auto-pairs",
+   enabled = false,
    },
    -- vimtex
    {"lervag/vimtex",
    },
    -- send-to-term
    {"habamax/vim-sendtoterm",
+   },
+   -- toggleterm
+   {"akinsho/toggleterm.nvim",
    },
    -- highlighter
    {"azabiong/vim-highlighter",
@@ -107,14 +111,13 @@ require("lazy").setup(
    },
    -- to copy anywhere
    {"ShikChen/osc52.vim",
-   keys = {
-     {"<C-c>", "y:call SendViaOSC52(getreg('\"'))<CR>", desc = "copy", mode="v"},
-     -- {"<F7>", "y:Oscyank<cr>", desc="copy", mode="x"},
+       keys = {
+         {"<C-c>", "y:call SendViaOSC52(getreg('\"'))<CR>", desc = "copy", mode="v"},
+         -- {"<F7>", "y:Oscyank<cr>", desc="copy", mode="x"},
+       },
    },
    -- toggle term
    {'akinsho/toggleterm.nvim', version = '*', config = true},
-   
-    
-
    }
+
 })
