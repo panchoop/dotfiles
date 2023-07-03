@@ -43,3 +43,6 @@ nnoremap <Leader>v <c-v>
 " "pdf viewer vimtex
 let g:vimtex_view_general_viewer='zathura'
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" coc remap for tab select first option
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"

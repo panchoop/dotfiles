@@ -114,6 +114,8 @@ PATH=/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux:$PATH;
 export PATH
 MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+# source autojump
+. /usr/share/autojump/autojump.sh
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
