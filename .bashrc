@@ -116,6 +116,8 @@ MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 # source autojump
 . /usr/share/autojump/autojump.sh
+# Autoclean Thrasvifm folder
+find /home/panchoop/.local/share/vifm/Trash -type f -mtime +30 | xargs rm -f
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -132,21 +134,5 @@ export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/nu
 if [ -f ~/.bash_only_local ]; then
     . ~/.bash_only_local
 fi
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/panchoop/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/panchoop/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/panchoop/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/panchoop/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
