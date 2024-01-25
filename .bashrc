@@ -109,11 +109,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# PATHS for texlive
-PATH=/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux:$PATH;
+# PATHS for texlive 2021 - TODO: remove if everything works out
+#PATH=/home/panchoop/.local/bin:/usr/local/texlive/2021/bin/x86_64-linux:$PATH;
+#export PATH
+#MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
+#INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+PATH=/home/panchoop/.local/bin:/usr/local/texlive/2023/bin/x86_64-linux:$PATH;
 export PATH
-MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 # source autojump
 . /usr/share/autojump/autojump.sh
 
