@@ -116,6 +116,9 @@ MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 # source autojump
 . /usr/share/autojump/autojump.sh
+# autocomplete bindings
+bind '"\C-j": menu-complete'
+bind '"\C-k": menu-complete-backward'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
